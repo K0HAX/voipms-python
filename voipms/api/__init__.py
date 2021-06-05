@@ -54,6 +54,12 @@ class Client(object):
         return self._call_detail_records
 
     @property
+    def reseller(self):
+        from voipms.api.reseller import Reseller
+        self._reseller = Reseller(self)
+        return self._reseller
+
+    @property
     def dids(self):
         if self._dids is None:
             from voipms.api.dids import DIDs
