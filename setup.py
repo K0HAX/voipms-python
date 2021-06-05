@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="voipms-python",
-    version="0.0.2",
+    version="0.0.3",
     description="Python wrapper for the voip.ms REST API",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -16,6 +16,9 @@ setup(
     keywords="voipms api",
     packages=find_packages(exclude=["tests", "tests.*"]),
     python_requires=">=3.4",
+    install_requires=[
+        'requests',
+        ],
     project_urls={
         "Bug Tracker": "https://github.com/dtesfai/voipms-python/issues",
         "Source Code": "https://github.com/dtesfai/voipms-python",
